@@ -181,4 +181,95 @@ class Person {
         System.out.println("Contact: " + contact);
     }
 }
+/**
+ * Guest class represents a guest extending the Person class with additional attributes.
+ */
+class Guest extends Person {
+    private String guestId;
+    private int stayDuration;
+    private String roomNumber;
 
+    /**
+     * Guest-Constructor to initialize a Guest object.
+     * @name: The name of the guest.
+     * @age: The age of the guest.
+     * @contact: The contact information of the guest.
+     * @guestId: The ID of the guest.
+     * @stayDuration: The duration of the guest's stay.
+     * @oomNumber: The room number assigned to the guest.
+     */
+    public Guest(String name, int age, String contact, String guestId, int stayDuration, String roomNumber) {
+        super(name, age, contact);
+        this.guestId = guestId;
+        this.stayDuration = stayDuration;
+        this.roomNumber = roomNumber;
+    }
+
+    /**
+     * getGuestId-Getter for the guest ID.
+     * return: guest ID.
+     */
+    public String getGuestId() {
+        return guestId;
+    }
+
+    /**
+     * setGuestId-Setter for the guest ID.
+     * @guestId: The new guest ID.
+     */
+    public void setGuestId(String guestId) {
+        this.guestId = guestId;
+    }
+
+    /**
+     * getStayDuration-Getter for the stay duration of the guest.
+     * return: The stay duration in days.
+     */
+    public int getStayDuration() {
+        return stayDuration;
+    }
+
+    /**
+     * setStayDuration-Setter for the stay duration of the guest.
+     * @stayDuration: The new stay duration in days.
+     */
+    public void setStayDuration(int stayDuration) {
+        this.stayDuration = stayDuration;
+    }
+
+    /**
+     * getRoomNumber-Getter for the room number assigned to the guest.
+     * return: The room number.
+     */
+    public String getRoomNumber() {
+        return roomNumber;
+    }
+
+    /**
+     * setRoomNumber-Setter for the room number assigned to the guest.
+     * @roomNumber The new room number.
+     */
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    /**
+     * displayInfo-Method to display information about the guest, overriding the superclass method.
+     */
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Guest ID: " + guestId);
+        System.out.println("Stay Duration: " + stayDuration + " days");
+        System.out.println("Room Number: " + roomNumber);
+    }
+
+    /**
+     * Method to calculate the bill for the guest's stay.
+     * @pricePerNight: The price per night for the room.
+     * return: The total bill amount.
+     */
+    public double calculateBill(double pricePerNight) {
+        return stayDuration * pricePerNight;
+    }
+}
