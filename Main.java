@@ -273,3 +273,80 @@ class Guest extends Person {
         return stayDuration * pricePerNight;
     }
 }
+/**
+ * Room class represents a room in the hotel with its attributes.
+ */
+class Room {
+    private String roomNumber;
+    private String roomType;
+    private double pricePerNight;
+
+    /**
+     * Room-Constructor to initialize a Room object.
+     * @roomNumber: The room number.
+     * @roomType: The type of room.
+     * @pricePerNight: The price per night for the room.
+     */
+    public Room(String roomNumber, String roomType, double pricePerNight) {
+        this.roomNumber = roomNumber;
+        this.roomType = roomType;
+        this.pricePerNight = pricePerNight;
+    }
+
+    /**
+     * getRoomNumber-Getter for the room number.
+     * return: The room number.
+     */
+    public String getRoomNumber() {
+        return roomNumber;
+    }
+
+    /**
+     * setRoomNumber-Setter for the room number.
+     * @roomNumber: The new room number.
+     */
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    /**
+     * getRoomType-Getter for the room type.
+     * return: The room type.
+     */
+    public String getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * setRoomType-Setter for the room type.
+     * @roomType: The new room type.
+     */
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+    /**
+     * getPricePerNight-Getter for the price per night for the room.
+     * return: The price per night.
+     */
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
+
+    /**
+     * setPricePerNight-Setter for the price per night for the room.
+     * @pricePerNight The new price per night.
+     */
+    public void setPricePerNight(double pricePerNight) {
+        this.pricePerNight = pricePerNight;
+    }
+
+    /**
+     * displayInfo-Method to display information about the room.
+     */
+    public void displayInfo() {
+        System.out.println("Room Number: " + roomNumber);
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Price per Night: " + pricePerNight);
+    }
+}
