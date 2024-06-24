@@ -350,3 +350,60 @@ class Room {
         System.out.println("Price per Night: " + pricePerNight);
     }
 }
+
+public class Booking {
+    private String bookingId;
+    private Guest guest;
+    private Room room;
+    private int numberOfNights;
+
+    public Booking(String bookingId, Guest guest, Room room, int numberOfNights) {
+        this.bookingId = bookingId;
+        this.guest = guest;
+        this.room = room;
+        this.numberOfNights = numberOfNights;
+    }
+
+    public String getBookingId() {
+        return bookingId;
+    }
+
+    public void setBookingId(String bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    public Guest getGuest() {
+        return guest;
+    }
+
+    public void setGuest(Guest guest) {
+        this.guest = guest;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public int getNumberOfNights() {
+        return numberOfNights;
+    }
+
+    public void setNumberOfNights(int numberOfNights) {
+        this.numberOfNights = numberOfNights;
+    }
+
+    public void displayInfo() {
+        System.out.println("Booking ID: " + bookingId);
+        guest.displayInfo();
+        room.displayInfo();
+        System.out.println("Number of Nights: " + numberOfNights);
+    }
+
+    public double calculateTotalCost() {
+        return numberOfNights * room.getPricePerNight();
+    }
+}
