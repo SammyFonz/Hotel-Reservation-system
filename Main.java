@@ -104,4 +104,81 @@ public class Main {
         }
     }
 }
+/**
+ * Person class - represents a person's attributes.
+ */
+class Person {
+    private String name;
+    private int age;
+    private String contact;
+
+    /**
+     * Constructor to initialize a Person object.
+     * @name: name of the person.
+     * @age: age of the person.
+     * @contact: contact information.
+     */
+    public Person(String name, int age, String contact) {
+        this.name = name;
+        this.age = age;
+        this.contact = contact;
+    }
+
+    /**
+     * getName-gets the name of the person.
+     * returns: The name of the person.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * setName-sets the name of the person.
+     * @name: The new name of the person.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * getAge-gets the age of the person.
+     * return: The age of the person.
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * setAge-Sets the age of the person.
+     * @age: The new age of the person.
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    /**
+     * getContact-Get the contact information.
+     * return: The contact information.
+     */
+    public String getContact() {
+        return contact;
+    }
+
+    /**
+     * setContact-Set the contact information of the person.
+     * @contact:The new contact information of the person.
+     */
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    /**
+     * displayInfo-Method to display information about the person.
+     */
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Contact: " + contact);
+    }
+}
 
